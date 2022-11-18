@@ -1,0 +1,100 @@
+[
+  {
+    "type": "event",
+    "anonymous": false,
+    "name": "ItemBought",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "seller",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "tokenId",
+        "indexed": true
+      },
+      {
+        "type": "address",
+        "name": "buyer",
+        "indexed": false
+      },
+      {
+        "type": "uint256",
+        "name": "price",
+        "indexed": false
+      },
+      {
+        "type": "uint256",
+        "name": "amountRemain",
+        "indexed": true
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "anonymous": false,
+    "name": "ItemCanceled",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "seller",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "tokenId",
+        "indexed": true
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "anonymous": false,
+    "name": "ItemListed",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "seller",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "tokenId",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "price",
+        "indexed": false
+      },
+      {
+        "type": "uint256",
+        "name": "amount",
+        "indexed": true
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "anonymous": false,
+    "name": "ItemSoldOut",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "seller",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "tokenId",
+        "indexed": true
+      },
+      {
+        "type": "address",
+        "name": "buyer",
+        "indexed": false
+      }
+    ]
+  }
+]

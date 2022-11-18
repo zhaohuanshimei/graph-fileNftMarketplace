@@ -1,0 +1,47 @@
+type ActiveItem @entity {
+  id: ID! #TokenID + SellerAddress
+  seller: Bytes! # address
+  tokenId: BigInt!
+  price: BigInt
+  # amount: BigInt! #if we don't need this item, we will delete it later
+  amountListed: BigInt!
+  amountSold: BigInt!
+}
+
+type ItemOwnership @entity {
+  id: ID! #TokenID + OwnerAddress!!!
+  owner: Bytes! # address
+  tokenId: BigInt!
+  price: BigInt #if we don't need this item, we will delete it later
+  amount: BigInt!
+}
+
+type ItemListed @entity {
+  id: ID! #TokenID + SellerAddress
+  seller: Bytes! # address
+  tokenId: BigInt!
+  price: BigInt
+  amount: BigInt!
+}
+
+type ItemCanceled @entity {
+  id: ID! #TokenID + SellerAddress
+  seller: Bytes! # address
+  tokenId: BigInt!
+}
+
+type ItemBought @entity {
+  id: ID! #TokenID + SellerAddress
+  seller: Bytes! # address
+  tokenId: BigInt!
+  buyer: Bytes! # address
+  price: BigInt
+  amountRemain: BigInt!
+}
+
+type ItemSoldOut @entity {
+  id: ID! #TokenID + SellerAddress
+  seller: Bytes! # address
+  tokenId: BigInt!
+  buyer: Bytes! # address
+}
